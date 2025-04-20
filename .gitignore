@@ -1,0 +1,48 @@
+# Node / Vite / React
+node_modules/
+dist/
+build/
+.vite/
+.cache/
+*.log
+*.tsbuildinfo
+
+# dotenv / secrets
+.env
+.env.*.local
+
+# OS & editor cruft
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+.idea/
+.vscode/
+
+# Kubernetes secrets or context files
+kubeconfig*
+*.secret.yaml
+secrets/
+certs/
+*.crt
+*.key
+
+# Nginx temp or local
+nginx.conf
+*.pid
+*.sock
+
+# Docker-related
+*.tar
+*.img
+*.container
+.dockerignore
+
+# Optional: if you use test runners
+coverage/
+*.lcov
+
+# Optional: GitHub Actions runner files
+.github/workflows/*.bak
+.github/workflows/*.tmp
+

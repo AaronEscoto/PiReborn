@@ -1,0 +1,19 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: acme-challenge-ingress
+  annotations:
+    kubernetes.io/ingress.class: traefik
+spec:
+  rules:
+  - host: dev.aaronescoto.com
+    http:
+      paths:
+      - path: /.well-known/acme-challenge/
+        pathType: Prefix
+        backend:
+          service:
+            name: pireborn
+            port:
+              number: 80
+

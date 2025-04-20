@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pireborn
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: pireborn
+  template:
+    metadata:
+      labels:
+        app: pireborn
+    spec:
+      containers:
+      - name: pireborn
+        image: aescoto123/pireborn:latest
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 80
+
