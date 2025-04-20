@@ -28,7 +28,6 @@ certs/
 *.key
 
 # Nginx temp or local
-nginx.conf
 *.pid
 *.sock
 
