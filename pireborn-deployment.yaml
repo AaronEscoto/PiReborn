@@ -13,9 +13,10 @@ spec:
         app: pireborn
     spec:
       containers:
-      - name: pireborn
-        image: aescoto123/pireborn:latest
-        imagePullPolicy: IfNotPresent
-        ports:
-        - containerPort: 80
-
+        - name: pireborn
+          image: ghcr.io/aaronescoto/pireborn:production
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 80
+      imagePullSecrets:
+        - name: ghcr-creds
