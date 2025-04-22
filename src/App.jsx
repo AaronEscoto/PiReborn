@@ -1,4 +1,5 @@
 import reactLogo from './assets/react.svg'
+import './index.css' // Make sure this exists and includes the CSS below
 
 function App() {
   return (
@@ -11,7 +12,7 @@ function App() {
       textAlign: 'center'
     }}>
       <header style={{ marginBottom: '2rem' }}>
-      <img src={reactLogo} alt="React logo" className="w-16 animate-spin-slow glow" style={{ width: '4rem' }} />
+        <img src={reactLogo} className="react-logo" alt="React logo" />
         <h1 style={{ fontSize: '2rem', fontWeight: 'bold', marginTop: '1rem' }}>
            PiReborn: A Live DevOps Proof-of-Concept
         </h1>

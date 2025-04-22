@@ -66,3 +66,20 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+/* Add this to index.css */
+
+@keyframes spin-slow {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.react-logo {
+  width: 64px;
+  animation: spin-slow 8s linear infinite;
+  filter: drop-shadow(0 0 0.75rem #61dafb);
+}
