@@ -1,74 +1,71 @@
-import reactLogo from './assets/react.svg'
-import './index.css' // Make sure this exists and includes the CSS below
+import './App.css';
 
-function App() {
+export default function Home() {
   return (
-    <div style={{
-      minHeight: '100vh',
-      backgroundColor: '#111827',
-      color: 'white',
-      fontFamily: 'sans-serif',
-      padding: '2rem',
-      textAlign: 'center'
-    }}>
-      <header style={{ marginBottom: '2rem' }}>
-        <img src={reactLogo} className="react-logo" alt="React logo" />
-        <h1 style={{ fontSize: '2rem', fontWeight: 'bold', marginTop: '1rem' }}>
-           PiReborn: A Live DevOps Proof-of-Concept
-        </h1>
-        <p style={{ color: '#ccc', maxWidth: '700px', margin: '1rem auto' }}>
-          Welcome to the live deployment of <strong>PiReborn</strong>.<br />
-          What you are seeing now is more than just a static site—it's a living, breathing DevOps proof-of-concept, built from the silicon up.
-        </p>
+    <div className="site-wrapper">
+      {/* Header */}
+      <header className="site-header">
+        <div className="container">
+          <div className="logo">aaronescoto.com</div>
+          <nav className="main-nav">
+            <a href="#pireborn">PiReborn</a>
+            <a href="#tr6k">TR6K</a>
+            <a href="/resume.pdf">Resume</a>
+          </nav>
+        </div>
       </header>
 
-      <main style={{ maxWidth: '700px', margin: '0 auto', textAlign: 'left' }}>
-        <section>
-          <h2>🧱 <strong>The Stack</strong></h2>
-          <ul>
-            <li><strong>Infrastructure:</strong> 2x Raspberry Pi 4, bare-metal</li>
-            <li><strong>Kubernetes:</strong> k3s, lightweight and battle-tested</li>
-            <li><strong>Networking & Ingress:</strong> Traefik with automatic TLS via Let's Encrypt</li>
-            <li><strong>Frontend:</strong> React + Vite webapp</li>
-            <li><strong>CI/CD:</strong> GitHub Actions deploy on commit</li>
-            <li><strong>Monitoring:</strong> Prometheus & Grafana</li>
-            <li><strong>Security:</strong> NetworkPolicies, RBAC, TLS by default</li>
-            <li><strong>Alerting:</strong> Webhooks to external endpoints (Discord, Slack, etc.)</li>
-            <li><strong>Infrastructure as Code:</strong> Terraform (optional, but included for completeness)</li>
-          </ul>
-        </section>
+      {/* Hero Section */}
+      <section className="hero-section">
+        <div className="container">
+          <h1 className="hero-title">Aaron Escoto</h1>
+          <p className="hero-subtitle">DevOps Engineer · SRE · Builder of Proofs and Projects</p>
+          <div className="hero-links">
+            <a href="https://github.com/aaronescoto" target="_blank">🐙 GitHub</a>
+            <a href="https://linkedin.com/in/aaronescoto" target="_blank">💼 LinkedIn</a>
+            <a href="/resume.pdf" target="_blank">📄 Resume</a>
+          </div>
+        </div>
+      </section>
 
-        <section style={{ marginTop: '2rem' }}>
-          <h2>⚙️ <strong>The Mission</strong></h2>
-          <p>
-            PiReborn isn’t just a tech stack — it’s a showcase of real-world DevOps practices:
+      {/* PiReborn Section */}
+      <section id="pireborn" className="section light">
+        <div className="container">
+          <h2 className="section-title">PiReborn</h2>
+          <p className="section-text">
+            A bare-metal dual Raspberry Pi cluster running a full DevOps pipeline with Kubernetes (k3s), Helm, Traefik, Let's Encrypt, CI/CD via GitHub Actions, and monitoring via Prometheus & Grafana.
           </p>
-          <ul>
-            <li>GitOps-style deployment pipelines</li>
-            <li>Automated certificate management</li>
-            <li>Declarative infrastructure and manifests</li>
-            <li>Observability baked in</li>
-            <li>Low-resource HA experimentation</li>
-          </ul>
-        </section>
+          <div className="tech-scroll">
+            <span>🐍 Python</span>
+            <span>🐳 Docker</span>
+            <span>⚙️ GitHub Actions</span>
+            <span>📦 Helm</span>
+            <span>🧭 Traefik</span>
+            <span>📊 Grafana</span>
+            <span>📈 Prometheus</span>
+          </div>
+        </div>
+      </section>
 
-        <section style={{ marginTop: '2rem' }}>
-          <h2>✨ <strong>The Why</strong></h2>
-          <p>
-            Because saying "I know DevOps" is easy. <br />
-            Showing it—live, automated, and running on your own hardware—means something.
-          </p>
-          <p style={{ fontWeight: 'bold', marginTop: '1rem' }}>
-            PiReborn is alive. <br /> And it’s just getting started.
-          </p>
-          <blockquote style={{ color: '#888', marginTop: '1rem' }}>
-            “The Pis, silent and unwavering, tamed the k3s cluster… and in doing so, tamed our hearts.”<br />
-            — an ancient DevOps proverb, probably.
-          </blockquote>
-        </section>
-      </main>
+      {/* TR6K Section */}
+      <section id="tr6k" className="section dark">
+        <div className="container">
+          <h2 className="section-title">Enter the Realm of TR6K</h2>
+          <p className="quote">“Ashbringer booted, so that others may boot.” — Prime Directive</p>
+          <div className="section-list">
+            <p>🗡️ Custom Ventoy USB theme</p>
+            <p>📜 Sacred README.txt with mythos</p>
+            <p>🔥 Dark phoenix visuals and boot sound</p>
+          </div>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="site-footer">
+        <div className="container">
+          <p>&copy; {new Date().getFullYear()} Aaron Escoto. All rights reserved.</p>
+        </div>
+      </footer>
     </div>
-  )
+  );
 }
-
-export default App
