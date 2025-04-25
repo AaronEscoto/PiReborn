@@ -1,0 +1,23 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: pireborn-ingress-dev
+  namespace: default
+  annotations:
+    cert-manager.io/cluster-issuer: letsencrypt-prod
+spec:
+  tls:
+    - hosts:
+        - dev.aaronescoto.com
+      secretName: pireborn-dev-tls
+  rules:
+    - host: dev.aaronescoto.com
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: pireborn
+                port:
+                  number: 80
