@@ -3,10 +3,11 @@ kind: Ingress
 metadata:
   name: pireborn-ingress
   annotations:
-    traefik.ingress.kubernetes.io/router.entrypoints: web
+    traefik.ingress.kubernetes.io/router.entrypoints: websecure
+    traefik.ingress.kubernetes.io/router.tls: "true"
 spec:
   rules:
-  - host: pireborn.local
+  - host: dev.aaronescoto.com
     http:
       paths:
       - path: /
