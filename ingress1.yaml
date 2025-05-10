@@ -1,0 +1,32 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  annotations:
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"networking.k8s.io/v1","kind":"Ingress","metadata":{"annotations":{"traefik.ingress.kubernetes.io/router.entrypoints":"websecure","traefik.ingress.kubernetes.io/router.tls":"true"},"name":"pireborn-ingress","namespace":"default"},"spec":{"rules":[{"host":"dev.aaronescoto.com","http":{"paths":[{"backend":{"service":{"name":"pireborn","port":{"number":80}}},"path":"/","pathType":"Prefix"}]}}]}}
+    traefik.ingress.kubernetes.io/router.entrypoints: websecure
+    traefik.ingress.kubernetes.io/router.tls: "true"
+  creationTimestamp: "2025-04-17T21:03:27Z"
+  generation: 2
+  name: pireborn-ingress
+  namespace: default
+  resourceVersion: "51685571"
+  uid: 1cd7553c-32a5-43e0-9850-71f87b8e1051
+spec:
+  ingressClassName: traefik
+  rules:
+  - host: dev.aaronescoto.com
+    http:
+      paths:
+      - backend:
+          service:
+            name: pireborn
+            port:
+              number: 80
+        path: /
+        pathType: Prefix
+status:
+  loadBalancer:
+    ingress:
+    - ip: 10.0.0.137
+    - ip: 10.0.0.139
