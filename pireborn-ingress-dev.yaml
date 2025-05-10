@@ -6,6 +6,7 @@ metadata:
     kubernetes.io/ingress.class: traefik
     cert-manager.io/cluster-issuer: letsencrypt-prod
     acme.cert-manager.io/http01-edit-in-place: "true"
+    traefik.ingress.kubernetes.io/router.entrypoints: websecure
     relic-wielder.com/battle-retry: "1"  # 👈 Dummy annotation to force reapply
 spec:
   rules:
@@ -23,4 +24,3 @@ spec:
     - hosts:
         - dev.aaronescoto.com
       secretName: pireborn-dev-tls
-
