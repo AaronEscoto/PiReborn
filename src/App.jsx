@@ -10,8 +10,9 @@ export default function Home() {
           <nav className="main-nav">
             <a href="#pireborn">PiReborn</a>
             <a href="#tr6k">TR6K</a>
-            <a href="/resume.pdf">Resume</a>
+            <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
           </nav>
+
         </div>
       </header>
 
@@ -20,20 +21,27 @@ export default function Home() {
         <div className="container">
           <h1 className="hero-title">Aaron Escoto</h1>
           <p className="hero-subtitle">DevSecOps Engineer | Veteran</p>
-          <div className="hero-links">
-            <a href="https://github.com/aaronescoto" target="_blank">🐙 GitHub</a>
-            <a href="https://linkedin.com/in/aaronescoto" target="_blank">💼 LinkedIn</a>
-            <a href="/resume.pdf" target="_blank">📄 Resume</a>
+          <div className="social-icons">
+            <a href="https://github.com/aaronescoto" className="github" target="_blank" rel="noopener noreferrer">
+              <img src="/github.svg" alt="GitHub" style={{ width: '36px' }} />
+            </a>
+            <a href="https://linkedin.com/in/aaronescoto" className="linkedin" target="_blank" rel="noopener noreferrer">
+              <img src="/linkedin.svg" alt="LinkedIn" style={{ width: '36px' }} />
+            </a>
+            <a href="/resume.pdf" className="resume" target="_blank" rel="noopener noreferrer">
+              <img src="/res.svg" alt="Resume" style={{ width: '36px' }} />
+            </a>
           </div>
         </div>
       </section>
 
+
       {/* PiReborn Section */}
       <section id="pireborn" className="section light">
         <div className="container">
-          <h2 className="section-title">What You are seeing live on this site right now...</h2>
+          <h2 className="section-title">What you are seeing right now...</h2>
           <p className="section-text">
-            <strong>PiReborn - A Live DevOps Proof-of-Concept:</strong> A fully operational DevOps proof-of-concept running on a bare-metal dual Raspberry Pi cluster, showcasing automated deployment, monitoring, and modern infrastructure best practices.
+            <strong>PiReborn - A Live DevOps Proof-of-Concept</strong> A fully live operational DevOps pipeline running on a bare-metal dual Raspberry Pi cluster, showcasing automated deployment, monitoring, and modern infrastructure best practices.
           </p>
           <h2 className="subsection-title">The Stack</h2>
           <ul className="section-list">
@@ -48,40 +56,39 @@ export default function Home() {
             <li><strong>Infrastructure as Code:</strong> Terraform (optional, but included for completeness)</li>
           </ul>
           <div className="carousel-track">
-            <span>🐍 Python</span>
-            <span>🐳 Docker</span>
-            <span>📦 Helm</span>
-            <span>🍓 Raspberry Pi</span>
-            <span>☸️ Kubernetes</span>
-            <span>⚛️ React</span>
-            <span>⚡ Vite</span>
-            <span>🛠️ GitHub Actions</span>
-            <span>📈 Prometheus</span>
-            <span>📊 Grafana</span>
-            <span>🌐 Terraform</span>
+            <span><img src="/python.svg" alt="Python" style={{ width: '84px' }} /></span>
+            <span><img src="/docker.svg" alt="Docker" style={{ width: '84px' }} /></span>
+            <span><img src="/helm.svg" alt="Helm" style={{ width: '84px' }} /></span>
+            <span><img src="/raspberrypi.svg" alt="Raspberry Pi" style={{ width: '84px' }} /></span>
+            <span><img src="/kubernetes.svg" alt="Kubernetes" style={{ width: '84px' }} /></span>
+            <span><img src="/react.svg" alt="React" style={{ width: '84px' }} className="spin" /></span>
+            <span><img src="/vite.svg" alt="Vite" style={{ width: '84px' }} /></span>
+            <span><img src="/githubactions.svg" alt="GitHub Actions" style={{ width: '84px' }} /></span>
+            <span><img src="/prometheus.svg" alt="Prometheus" style={{ width: '84px' }} /></span>
+            <span><img src="/grafana.svg" alt="Grafana" style={{ width: '84px' }} /></span>
+            <span><img src="/letsencrypt.svg" alt="Let’s Encrypt" style={{ width: '84px' }} /></span>
+            <span><img src="/terraform.svg" alt="Terraform" style={{ width: '84px' }} /></span>
 
-            {/* duplicate set for looping */}
-            <span>🐍 Python</span>
-            <span>🐳 Docker</span>
-            <span>📦 Helm</span>
-            <span>🍓 Raspberry Pi</span>
-            <span>☸️ Kubernetes</span>
-            <span>⚛️ React</span>
-            <span>⚡ Vite</span>
-            <span>🛠️ GitHub Actions</span>
-            <span>📈 Prometheus</span>
-            <span>📊 Grafana</span>
-            <span>🌐 Terraform</span>
+            {/* duplicate set for seamless loop */}
+            <span><img src="/python.svg" alt="Python" style={{ width: '84px' }} /></span>
+            <span><img src="/docker.svg" alt="Docker" style={{ width: '84px' }} /></span>
+            <span><img src="/helm.svg" alt="Helm" style={{ width: '84px' }} /></span>
+            <span><img src="/raspberrypi.svg" alt="Raspberry Pi" style={{ width: '84px' }} /></span>
+            <span><img src="/kubernetes.svg" alt="Kubernetes" style={{ width: '84px' }} /></span>
+            <span><img src="/react.svg" alt="React" style={{ width: '84px' }}className="spin" /></span>
+            <span><img src="/vite.svg" alt="Vite" style={{ width: '84px' }} /></span>
+            <span><img src="/githubactions.svg" alt="GitHub Actions" style={{ width: '84px' }} /></span>
+            <span><img src="/prometheus.svg" alt="Prometheus" style={{ width: '84px' }} /></span>
+            <span><img src="/grafana.svg" alt="Grafana" style={{ width: '84px' }} /></span>
+            <span><img src="/letsencrypt.svg" alt="Let’s Encrypt" style={{ width: '84px' }} /></span>
+            <span><img src="/terraform.svg" alt="Terraform" style={{ width: '84px' }} /></span>
           </div>
+
+          
           <h2 className="subsection-title">The Why</h2>
           <p className="section-text">
             Because saying <strong>"I know DevOps"</strong> is easy.<br />
             <strong>Showing</strong> it—live, automated, and running on your own hardware—means something.
-          </p>
-
-          <p className="section-text">
-            <strong>PiReborn is alive.</strong><br />
-            <strong>And it’s just getting started.</strong>
           </p>
 
           <p className="section-text">
@@ -94,7 +101,10 @@ export default function Home() {
             <li><strong>Declarative infrastructure and manifests</strong></li>
             <li><strong>Observability baked in</strong></li>
             <li><strong>Low-resource HA experimentation</strong></li>
+            <li><strong>Security-first networking</strong></li>
           </ul>
+
+
 
           <blockquote className="quote">
             “The Pis, silent and unwavering, tamed the k3s cluster… and in doing so, tamed our hearts.”<br />
