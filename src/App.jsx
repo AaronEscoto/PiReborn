@@ -32,17 +32,23 @@ export default function Home() {
             A fully operational pipeline running on a modest bare-metal Raspberry Pi cluster, showcasing automated deployment, monitoring, and modern infrastructure best practices.
           </p>
           <h2 className="subsection-title">The Stack</h2>
-          <ul className="stack-list">
-            <li><strong>Infrastructure:</strong> 2x Raspberry Pi 4, bare-metal</li>
-            <li><strong>Kubernetes:</strong> k3s, lightweight and battle-tested</li>
-            <li><strong>Networking & Ingress:</strong> Traefik with automatic TLS via Let's Encrypt</li>
-            <li><strong>Frontend:</strong> React + Vite webapp</li>
-            <li><strong>CI/CD:</strong> GitHub Actions deploy on commit</li>
-            <li><strong>Monitoring:</strong> Prometheus & Grafana</li>
-            <li><strong>Security:</strong> RBAC, TLS by default</li>
-            <li><strong>Alerting:</strong> Webhooks to external endpoints (Discord, Slack, etc.)</li>
-            <li><strong>Infrastructure as Code:</strong> Terraform (optional, but included for completeness)</li>
-          </ul>
+          <div className="stack-wrapper">
+            <ul className="stack-list">
+              <li><strong>Infrastructure:</strong> 2x Raspberry Pi 4, bare-metal</li>
+              <li><strong>Kubernetes:</strong> k3s, lightweight and battle-tested</li>
+              <li><strong>Networking & Ingress:</strong> Traefik with automatic TLS via Let's Encrypt</li>
+              <li><strong>Frontend:</strong> React + Vite webapp</li>
+              <li><strong>CI/CD:</strong> GitHub Actions deploy on commit</li>
+              <li><strong>Monitoring:</strong> Prometheus & Grafana</li>
+              <li><strong>Security:</strong> RBAC, TLS by default</li>
+              <li><strong>Alerting:</strong> Webhooks to external endpoints (Discord, Slack, etc.)</li>
+              <li><strong>Infrastructure as Code:</strong> Terraform (optional, but included for completeness)</li>
+            </ul>
+            <div className="monk-inline">
+              <img src="/monks.png" alt="The Watchers" />
+              <p className="monk-caption">The Pis, silent and unwavering, keep watch over the cluster...</p>
+            </div>
+          </div>
           <div className="carousel-wrapper">
             <div className="carousel-track">
               {/* First pass */}
@@ -79,7 +85,7 @@ export default function Home() {
             <strong>Showing</strong> it—live, automated, and running on your own hardware—means something.
           </p>
           <p className="section-text">
-            PiReborn isn’t just a tech stack — it’s a showcase of real-world DevOps practices:
+            PiReborn isn’t just a tech stack—it’s a showcase of real-world DevOps practices:
           </p>
 
           <ul className="section-list">

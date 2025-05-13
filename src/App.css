@@ -69,13 +69,13 @@ html, body {
 .hero-section,
 #pireborn,
 #tr6k {
-  min-height: 60vh;
+  min-height: 100vh;
   scroll-snap-align: start;
   
 }
 
 #tr6k {
-  padding-top: 13rem;
+  padding-top: 20rem;
   text-align: center;
 }
 
@@ -100,7 +100,7 @@ html, body {
 .hero,
 .hero-section {
   text-align: center;
-  padding-top: 8rem;
+  padding-top: 15rem;
 }
 
 .hero-title {
@@ -112,7 +112,7 @@ html, body {
 .hero-subtitle {
   font-size: clamp(1.1rem, 2.5vw, 1.5rem);
   color: var(--text-muted);
-  margin-bottom: 4rem;
+  margin-bottom: 15rem;
 }
 
 .social-icons a {
@@ -241,3 +241,86 @@ a:hover {
   filter: brightness(1.3);
   text-decoration: underline;
 }
+
+.monk-vision {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.monk-vision img {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  border: 4px solid var(--accent);
+  object-fit: cover;
+  box-shadow:
+    0 0 25px rgba(79, 195, 247, 0.3),
+    0 0 40px rgba(79, 195, 247, 0.2),
+    0 0 60px rgba(79, 195, 247, 0.1);
+  animation: sacredPulse 3s ease-in-out infinite;
+}
+
+.monk-caption {
+  margin-top: 1rem;
+  font-style: italic;
+  font-size: 1rem;
+  color: var(--text-muted);
+  text-align: center;
+  max-width: 300px;
+}
+
+@keyframes sacredPulse {
+  0%, 100% {
+    box-shadow:
+      0 0 25px rgba(79, 195, 247, 0.3),
+      0 0 40px rgba(79, 195, 247, 0.2),
+      0 0 60px rgba(79, 195, 247, 0.1);
+  }
+  50% {
+    box-shadow:
+      0 0 40px rgba(79, 195, 247, 0.4),
+      0 0 60px rgba(79, 195, 247, 0.3),
+      0 0 80px rgba(79, 195, 247, 0.2);
+  }
+}
+
+.stack-wrapper {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.stack-list {
+  flex: 1 1 500px;
+  list-style: disc;
+}
+
+.monk-inline {
+  flex: 0 0 200px;
+  text-align: center;
+}
+
+.monk-inline img {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--accent);
+  box-shadow:
+    0 0 25px rgba(79, 195, 247, 0.3),
+    0 0 40px rgba(79, 195, 247, 0.2),
+    0 0 60px rgba(79, 195, 247, 0.1);
+  animation: sacredPulse 3s ease-in-out infinite;
+}
+
+.monk-caption {
+  font-style: italic;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-top: 0.5rem;
+}
+
