@@ -41,7 +41,8 @@ export default function Home() {
         <div className="container">
           <h2 className="section-title">What you are seeing right now...</h2>
           <p className="section-text">
-            <strong>PiReborn - A Live DevOps Proof-of-Concept</strong> A fully live operational DevOps pipeline running on a bare-metal dual Raspberry Pi cluster, showcasing automated deployment, monitoring, and modern infrastructure best practices.
+            <strong>PiReborn – A Live DevOps Proof-of-Concept: </strong>
+            A fully operational pipeline running on a modest bare-metal Raspberry Pi cluster, showcasing automated deployment, monitoring, and modern infrastructure best practices.
           </p>
           <h2 className="subsection-title">The Stack</h2>
           <ul className="section-list">
@@ -56,35 +57,36 @@ export default function Home() {
             <li><strong>Infrastructure as Code:</strong> Terraform (optional, but included for completeness)</li>
           </ul>
           <div className="carousel-track">
-            <span><img src="/python.svg" alt="Python" style={{ width: '84px' }} /></span>
-            <span><img src="/docker.svg" alt="Docker" style={{ width: '84px' }} /></span>
-            <span><img src="/helm.svg" alt="Helm" style={{ width: '84px' }} /></span>
-            <span><img src="/raspberrypi.svg" alt="Raspberry Pi" style={{ width: '84px' }} /></span>
-            <span><img src="/kubernetes.svg" alt="Kubernetes" style={{ width: '84px' }} /></span>
-            <span><img src="/react.svg" alt="React" style={{ width: '84px' }} className="spin" /></span>
-            <span><img src="/vite.svg" alt="Vite" style={{ width: '84px' }} /></span>
-            <span><img src="/githubactions.svg" alt="GitHub Actions" style={{ width: '84px' }} /></span>
-            <span><img src="/prometheus.svg" alt="Prometheus" style={{ width: '84px' }} /></span>
-            <span><img src="/grafana.svg" alt="Grafana" style={{ width: '84px' }} /></span>
-            <span><img src="/letsencrypt.svg" alt="Let’s Encrypt" style={{ width: '84px' }} /></span>
-            <span><img src="/terraform.svg" alt="Terraform" style={{ width: '84px' }} /></span>
+            <span><img src="/python.svg" alt="Python" className="tech-icon" /></span>
+            <span><img src="/docker.svg" alt="Docker" className="tech-icon" /></span>
+            <span><img src="/helm.svg" alt="Helm" className="tech-icon" /></span>
+            <span><img src="/raspberrypi.svg" alt="Raspberry Pi" className="tech-icon" /></span>
+            <span><img src="/kubernetes.svg" alt="Kubernetes" className="tech-icon" /></span>
+            <span><img src="/react.svg" alt="React" className="tech-icon spin" /></span>
+            <span><img src="/vite.svg" alt="Vite" className="tech-icon" /></span>
+            <span><img src="/githubactions.svg" alt="GitHub Actions" className="tech-icon" /></span>
+            <span><img src="/prometheus.svg" alt="Prometheus" className="tech-icon" /></span>
+            <span><img src="/grafana.svg" alt="Grafana" className="tech-icon" /></span>
+            <span><img src="/letsencrypt.svg" alt="Let’s Encrypt" className="tech-icon" /></span>
+            <span><img src="/terraform.svg" alt="Terraform" className="tech-icon" /></span>
 
             {/* duplicate set for seamless loop */}
-            <span><img src="/python.svg" alt="Python" style={{ width: '84px' }} /></span>
-            <span><img src="/docker.svg" alt="Docker" style={{ width: '84px' }} /></span>
-            <span><img src="/helm.svg" alt="Helm" style={{ width: '84px' }} /></span>
-            <span><img src="/raspberrypi.svg" alt="Raspberry Pi" style={{ width: '84px' }} /></span>
-            <span><img src="/kubernetes.svg" alt="Kubernetes" style={{ width: '84px' }} /></span>
-            <span><img src="/react.svg" alt="React" style={{ width: '84px' }}className="spin" /></span>
-            <span><img src="/vite.svg" alt="Vite" style={{ width: '84px' }} /></span>
-            <span><img src="/githubactions.svg" alt="GitHub Actions" style={{ width: '84px' }} /></span>
-            <span><img src="/prometheus.svg" alt="Prometheus" style={{ width: '84px' }} /></span>
-            <span><img src="/grafana.svg" alt="Grafana" style={{ width: '84px' }} /></span>
-            <span><img src="/letsencrypt.svg" alt="Let’s Encrypt" style={{ width: '84px' }} /></span>
-            <span><img src="/terraform.svg" alt="Terraform" style={{ width: '84px' }} /></span>
+            <span><img src="/python.svg" alt="Python" className="tech-icon" /></span>
+            <span><img src="/docker.svg" alt="Docker" className="tech-icon" /></span>
+            <span><img src="/helm.svg" alt="Helm" className="tech-icon" /></span>
+            <span><img src="/raspberrypi.svg" alt="Raspberry Pi" className="tech-icon" /></span>
+            <span><img src="/kubernetes.svg" alt="Kubernetes" className="tech-icon" /></span>
+            <span><img src="/react.svg" alt="React" className="tech-icon spin" /></span>
+            <span><img src="/vite.svg" alt="Vite" className="tech-icon" /></span>
+            <span><img src="/githubactions.svg" alt="GitHub Actions" className="tech-icon" /></span>
+            <span><img src="/prometheus.svg" alt="Prometheus" className="tech-icon" /></span>
+            <span><img src="/grafana.svg" alt="Grafana" className="tech-icon" /></span>
+            <span><img src="/letsencrypt.svg" alt="Let’s Encrypt" className="tech-icon" /></span>
+            <span><img src="/terraform.svg" alt="Terraform" className="tech-icon" /></span>
           </div>
 
-          
+
+
           <h2 className="subsection-title">The Why</h2>
           <p className="section-text">
             Because saying <strong>"I know DevOps"</strong> is easy.<br />

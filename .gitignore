@@ -45,3 +45,4 @@ coverage/
 .github/workflows/*.bak
 .github/workflows/*.tmp
 
+push_to_github.sh
