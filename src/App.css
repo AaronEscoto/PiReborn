@@ -111,7 +111,7 @@ body {
 /* HERO */
 .hero,
 .hero-section {
-  padding: 8rem 0 4rem;
+  padding: 20rem 0 20rem;
   text-align: center;
 }
 
@@ -395,4 +395,64 @@ html, body {
 .tech-icon {
   width: 84px;
   height: 84px;
+}
+
+.carousel-wrapper {
+  overflow: hidden;
+  width: 100%;
+}
+
+.carousel-track {
+  display: flex;
+  gap: 2rem;
+  animation: scroll-left 40s linear infinite;
+  width: max-content;
+  align-items: center;
+}
+
+.carousel-track:hover,
+.carousel-track:active,
+.carousel-track.touching {
+  animation-play-state: paused;
+  cursor: grab;
+}
+
+.carousel-track::-webkit-scrollbar {
+  display: none;
+}
+
+.tech-icon {
+  width: 84px;
+  object-fit: contain;
+  display: block;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.spin {
+  animation: spin 20s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.carousel-track::-webkit-scrollbar {
+  display: none;
+}
+
+.section-title {
+  text-align: center;
 }

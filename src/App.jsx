@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <div className="site-wrapper">
       {/* Header */}
-      <header className="site-header">
+      {/* <header className="site-header">
         <div className="container">
           <div className="logo">Aaronescoto.com</div>
           <nav className="main-nav">
@@ -14,7 +14,7 @@ export default function Home() {
           </nav>
 
         </div>
-      </header>
+      </header> */}
 
       {/* Hero Section */}
       <section className="hero-section">
@@ -39,7 +39,7 @@ export default function Home() {
       {/* PiReborn Section */}
       <section id="pireborn" className="section light">
         <div className="container">
-          <h2 className="section-title">What you are seeing right now...</h2>
+          <h1 className="section-title">What you are seeing now...</h1>
           <p className="section-text">
             <strong>PiReborn – A Live DevOps Proof-of-Concept: </strong>
             A fully operational pipeline running on a modest bare-metal Raspberry Pi cluster, showcasing automated deployment, monitoring, and modern infrastructure best practices.
@@ -56,33 +56,34 @@ export default function Home() {
             <li><strong>Alerting:</strong> Webhooks to external endpoints (Discord, Slack, etc.)</li>
             <li><strong>Infrastructure as Code:</strong> Terraform (optional, but included for completeness)</li>
           </ul>
-          <div className="carousel-track">
-            <span><img src="/python.svg" alt="Python" className="tech-icon" /></span>
-            <span><img src="/docker.svg" alt="Docker" className="tech-icon" /></span>
-            <span><img src="/helm.svg" alt="Helm" className="tech-icon" /></span>
-            <span><img src="/raspberrypi.svg" alt="Raspberry Pi" className="tech-icon" /></span>
-            <span><img src="/kubernetes.svg" alt="Kubernetes" className="tech-icon" /></span>
-            <span><img src="/react.svg" alt="React" className="tech-icon spin" /></span>
-            <span><img src="/vite.svg" alt="Vite" className="tech-icon" /></span>
-            <span><img src="/githubactions.svg" alt="GitHub Actions" className="tech-icon" /></span>
-            <span><img src="/prometheus.svg" alt="Prometheus" className="tech-icon" /></span>
-            <span><img src="/grafana.svg" alt="Grafana" className="tech-icon" /></span>
-            <span><img src="/letsencrypt.svg" alt="Let’s Encrypt" className="tech-icon" /></span>
-            <span><img src="/terraform.svg" alt="Terraform" className="tech-icon" /></span>
+          <div className="carousel-wrapper">
+            <div className="carousel-track">
+              {/* First pass */}
+              <span><img src="/docker.svg" alt="Docker" className="tech-icon" /></span>
+              <span><img src="/helm.svg" alt="Helm" className="tech-icon" /></span>
+              <span><img src="/raspberrypi.svg" alt="Raspberry Pi" className="tech-icon" /></span>
+              <span><img src="/kubernetes.svg" alt="Kubernetes" className="tech-icon" /></span>
+              <span><img src="/react.svg" alt="React" className="tech-icon spin" /></span>
+              <span><img src="/vite.svg" alt="Vite" className="tech-icon" /></span>
+              <span><img src="/githubactions.svg" alt="GitHub Actions" className="tech-icon" /></span>
+              <span><img src="/prometheus.svg" alt="Prometheus" className="tech-icon" /></span>
+              <span><img src="/grafana.svg" alt="Grafana" className="tech-icon" /></span>
+              <span><img src="/letsencrypt.svg" alt="Let’s Encrypt" className="tech-icon" /></span>
+              <span><img src="/terraform.svg" alt="Terraform" className="tech-icon" /></span>
 
-            {/* duplicate set for seamless loop */}
-            <span><img src="/python.svg" alt="Python" className="tech-icon" /></span>
-            <span><img src="/docker.svg" alt="Docker" className="tech-icon" /></span>
-            <span><img src="/helm.svg" alt="Helm" className="tech-icon" /></span>
-            <span><img src="/raspberrypi.svg" alt="Raspberry Pi" className="tech-icon" /></span>
-            <span><img src="/kubernetes.svg" alt="Kubernetes" className="tech-icon" /></span>
-            <span><img src="/react.svg" alt="React" className="tech-icon spin" /></span>
-            <span><img src="/vite.svg" alt="Vite" className="tech-icon" /></span>
-            <span><img src="/githubactions.svg" alt="GitHub Actions" className="tech-icon" /></span>
-            <span><img src="/prometheus.svg" alt="Prometheus" className="tech-icon" /></span>
-            <span><img src="/grafana.svg" alt="Grafana" className="tech-icon" /></span>
-            <span><img src="/letsencrypt.svg" alt="Let’s Encrypt" className="tech-icon" /></span>
-            <span><img src="/terraform.svg" alt="Terraform" className="tech-icon" /></span>
+              {/* Duplicate once for looping */}
+              <span><img src="/docker.svg" alt="Docker" className="tech-icon" /></span>
+              <span><img src="/helm.svg" alt="Helm" className="tech-icon" /></span>
+              <span><img src="/raspberrypi.svg" alt="Raspberry Pi" className="tech-icon" /></span>
+              <span><img src="/kubernetes.svg" alt="Kubernetes" className="tech-icon" /></span>
+              <span><img src="/react.svg" alt="React" className="tech-icon spin" /></span>
+              <span><img src="/vite.svg" alt="Vite" className="tech-icon" /></span>
+              <span><img src="/githubactions.svg" alt="GitHub Actions" className="tech-icon" /></span>
+              <span><img src="/prometheus.svg" alt="Prometheus" className="tech-icon" /></span>
+              <span><img src="/grafana.svg" alt="Grafana" className="tech-icon" /></span>
+              <span><img src="/letsencrypt.svg" alt="Let’s Encrypt" className="tech-icon" /></span>
+              <span><img src="/terraform.svg" alt="Terraform" className="tech-icon" /></span>
+            </div>
           </div>
 
 
