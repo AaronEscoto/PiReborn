@@ -3,21 +3,8 @@ import './App.css';
 export default function Home() {
   return (
     <div className="site-wrapper">
-      {/* Header */}
-      {/* <header className="site-header">
-        <div className="container">
-          <div className="logo">Aaronescoto.com</div>
-          <nav className="main-nav">
-            <a href="#pireborn">PiReborn</a>
-            <a href="#tr6k">TR6K</a>
-            <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
-          </nav>
-
-        </div>
-      </header> */}
-
       {/* Hero Section */}
-      <section className="hero-section">
+      <section className="hero-section snap-section">
         <div className="container">
           <h1 className="hero-title">Aaron Escoto</h1>
           <p className="hero-subtitle">DevSecOps Engineer | Veteran</p>
@@ -32,27 +19,27 @@ export default function Home() {
               <img src="/res.svg" alt="Resume" style={{ width: '36px' }} />
             </a>
           </div>
+          <a href="#pireborn" className="scroll-down">⬇ Click to descend ⬇</a>
         </div>
       </section>
 
-
       {/* PiReborn Section */}
-      <section id="pireborn" className="section light">
+      <section id="pireborn" className="section light snap-section">
         <div className="container">
-          <h1 className="section-title">What you are seeing now...</h1>
+          <h1 className="section-title center">What you are seeing now...</h1>
           <p className="section-text">
             <strong>PiReborn – A Live DevOps Proof-of-Concept: </strong>
             A fully operational pipeline running on a modest bare-metal Raspberry Pi cluster, showcasing automated deployment, monitoring, and modern infrastructure best practices.
           </p>
           <h2 className="subsection-title">The Stack</h2>
-          <ul className="section-list">
+          <ul className="stack-list">
             <li><strong>Infrastructure:</strong> 2x Raspberry Pi 4, bare-metal</li>
             <li><strong>Kubernetes:</strong> k3s, lightweight and battle-tested</li>
             <li><strong>Networking & Ingress:</strong> Traefik with automatic TLS via Let's Encrypt</li>
             <li><strong>Frontend:</strong> React + Vite webapp</li>
             <li><strong>CI/CD:</strong> GitHub Actions deploy on commit</li>
             <li><strong>Monitoring:</strong> Prometheus & Grafana</li>
-            <li><strong>Security:</strong> NetworkPolicies, RBAC, TLS by default</li>
+            <li><strong>Security:</strong> RBAC, TLS by default</li>
             <li><strong>Alerting:</strong> Webhooks to external endpoints (Discord, Slack, etc.)</li>
             <li><strong>Infrastructure as Code:</strong> Terraform (optional, but included for completeness)</li>
           </ul>
@@ -86,14 +73,11 @@ export default function Home() {
             </div>
           </div>
 
-
-
           <h2 className="subsection-title">The Why</h2>
           <p className="section-text">
             Because saying <strong>"I know DevOps"</strong> is easy.<br />
             <strong>Showing</strong> it—live, automated, and running on your own hardware—means something.
           </p>
-
           <p className="section-text">
             PiReborn isn’t just a tech stack — it’s a showcase of real-world DevOps practices:
           </p>
@@ -107,24 +91,20 @@ export default function Home() {
             <li><strong>Security-first networking</strong></li>
           </ul>
 
-
-
           <blockquote className="quote">
             “The Pis, silent and unwavering, tamed the k3s cluster… and in doing so, tamed our hearts.”<br />
             — an ancient DevOps proverb, probably.
           </blockquote>
-
         </div>
       </section>
 
       {/* TR6K Section */}
-      <section id="tr6k" className="section dark">
+      <section id="tr6k" className="section dark snap-section full-viewport">
         <div className="container">
           <h1 className="section-title">UNDER CONSTRUCTION</h1>
           <h2 className="section-title">Enter the Realm of TR6K</h2>
           <p className="quote">“Ashbringer booted, so that others may boot.” — Prime Directive</p>
-          <div className="section-list">
-          </div>
+          <div className="section-list"></div>
         </div>
       </section>
 
