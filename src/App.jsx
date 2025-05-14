@@ -7,7 +7,7 @@ export default function Home() {
       <section className="hero-section snap-section">
         <div className="container">
           <h1 className="hero-title">Aaron Escoto</h1>
-          <p className="hero-subtitle">DevSecOps Engineer | Veteran</p>
+          <p className="hero-subtitle">DevSecOps | Veteran, US Army</p>
           <div className="social-icons">
             <a href="https://github.com/aaronescoto" className="github" target="_blank" rel="noopener noreferrer">
               <img src="/github.svg" alt="GitHub" style={{ width: '36px' }} />
@@ -46,7 +46,8 @@ export default function Home() {
             </ul>
             <div className="monk-inline">
               <img src="/monks.png" alt="The Watchers" />
-              <p className="monk-caption">The Pis, silent and unwavering, keep watch over the cluster...</p>
+              <p className="monk-caption">“The Pis, silent and unwavering, tamed the k3s cluster… and in doing so, tamed our hearts.”<br />
+                — an ancient DevOps proverb, probably.</p>
             </div>
           </div>
           <div className="carousel-wrapper">
@@ -96,11 +97,6 @@ export default function Home() {
             <li><strong>Low-resource HA experimentation</strong></li>
             <li><strong>Security-first networking</strong></li>
           </ul>
-
-          <blockquote className="quote">
-            “The Pis, silent and unwavering, tamed the k3s cluster… and in doing so, tamed our hearts.”<br />
-            — an ancient DevOps proverb, probably.
-          </blockquote>
         </div>
       </section>
 
