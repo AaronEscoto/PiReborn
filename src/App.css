@@ -73,7 +73,7 @@ body {
 #pireborn,
 #tr6k {
   font-weight: 300;
-  min-height: 90vh; /*viewport*/
+  min-height: 80vh; /*viewport*/
   scroll-snap-align: start;
 
 }
@@ -104,12 +104,12 @@ body {
 .hero,
 .hero-section {
   text-align: center;
-  padding-top: 11.11rem;
+  padding-top: 2rem;
 }
 
 .hero-title {
   font-size: clamp(3.3rem, 14vw, 13rem);
-  font-weight: 300;
+  font-weight: 200;
   margin-bottom: 1rem;
 }
 
