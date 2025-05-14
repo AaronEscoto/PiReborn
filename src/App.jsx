@@ -103,12 +103,13 @@ export default function Home() {
             <li><strong>Low-resource HA experimentation</strong></li>
             <li><strong>Security-first networking</strong></li>
           </ul>
-          <section className="descend">
-            <a href="#tr6k" className="scroll-down">
-              <img src="/button_cleaned.svg" alt="Scroll Down" />
-            </a>
-          </section>
+
         </div>
+        <section className="descend">
+          <a href="#tr6k" className="scroll-down">
+            <img src="/button_cleaned.svg" alt="Scroll Down" />
+          </a>
+        </section>
       </section>
 
       {/* TR6K Section */}

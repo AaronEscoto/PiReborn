@@ -117,12 +117,11 @@ body {
   font-size: clamp(1rem, 3vw, 2rem);
   font-weight: 300;
   color: var(--text-muted);
-  margin-bottom: 2rem;
+  margin-bottom: 5rem;
 }
 
 .descend {
   text-align: center;
-  padding-bottom: 4rem;
 }
 
 .social-icons img {
@@ -396,4 +395,8 @@ a:hover {
   50% {
     transform: translateY(8px);
   }
+}
+
+.snap-section {
+  padding-bottom: 0rem;
 }
