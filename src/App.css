@@ -108,7 +108,7 @@ body {
 }
 
 .hero-title {
-  font-size: clamp(3.3rem, 13vw, 8rem);
+  font-size: clamp(3.3rem, 14vw, 13rem);
   font-weight: 300;
   margin-bottom: 1rem;
 }
@@ -117,7 +117,7 @@ body {
   font-size: clamp(1rem, 3vw, 2rem);
   font-weight: 300;
   color: var(--text-muted);
-  margin-bottom: 5rem;
+  margin-bottom: 2rem;
 }
 
 .descend {
@@ -141,7 +141,7 @@ body {
 .scroll-down {
   margin-top: 2rem;
   font-size: 1.2rem;
-  opacity: 0.2;
+  opacity: 1;
   transition: opacity 0.3s ease;
   cursor: pointer;
   text-align: center;
@@ -381,7 +381,7 @@ a:hover {
 
 .scroll-down img {
   width: clamp(96px, 12vw, 160px);         /* 2.5× your original */
-  animation: bounceDescend 1.6s infinite;
+  animation: bounceDescend 1.9s infinite;
 }
 
 .scroll-down img:hover {
@@ -393,7 +393,7 @@ a:hover {
     transform: translateY(0);
   }
   50% {
-    transform: translateY(8px);
+    transform: translateY(16px);
   }
 }
 
