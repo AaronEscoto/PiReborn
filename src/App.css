@@ -10,7 +10,8 @@
   --accent: #4FC3F7;
 }
 
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
   max-width: 100vw !important;
@@ -32,7 +33,9 @@ html, body {
   overflow-x: hidden;
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -70,9 +73,9 @@ html, body {
 #pireborn,
 #tr6k {
   font-weight: 300;
-  min-height: 80vh;
+  min-height: 90vh; /*viewport*/
   scroll-snap-align: start;
-  
+
 }
 
 #tr6k {
@@ -101,27 +104,34 @@ html, body {
 .hero,
 .hero-section {
   text-align: center;
-  padding-top: 2rem;
+  padding-top: 11.11rem;
 }
 
 .hero-title {
-  font-size: clamp(4.5rem, 12vw, 8rem);
+  font-size: clamp(3.3rem, 13vw, 8rem);
   font-weight: 300;
   margin-bottom: 1rem;
 }
 
 .hero-subtitle {
-  font-size: clamp(1.5rem, 4vw, 2rem);
+  font-size: clamp(1rem, 3vw, 2rem);
   font-weight: 300;
   color: var(--text-muted);
-  margin-bottom: 10rem;
+  margin-bottom: 2rem;
 }
 
-.social-icons a {
+.descend {
+  text-align: center;
+  padding-bottom: 4rem;
+}
+
+.social-icons img {
   margin: 0.3rem;
-  display: inline-block;
+  width: clamp(46px, 8vw, 84px);
+  height: auto;
   transition: transform 0.2s ease, filter 0.2s ease;
 }
+
 
 .social-icons a:hover img {
   filter: drop-shadow(0 0 6px var(--accent));
@@ -175,8 +185,13 @@ html, body {
 }
 
 @keyframes scroll-left {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
 /* ============================ */
@@ -216,14 +231,27 @@ html, body {
 }
 
 @keyframes pulse {
-  0% { opacity: 1; }
-  50% { opacity: 0.6; }
-  100% { opacity: 1; }
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.6;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
 
 @keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 .spin {
@@ -274,12 +302,15 @@ a:hover {
 }
 
 @keyframes sacredPulse {
-  0%, 100% {
+
+  0%,
+  100% {
     box-shadow:
       0 0 25px rgba(79, 195, 247, 0.3),
       0 0 40px rgba(79, 195, 247, 0.2),
       0 0 60px rgba(79, 195, 247, 0.1);
   }
+
   50% {
     box-shadow:
       0 0 40px rgba(79, 195, 247, 0.4),
@@ -335,7 +366,7 @@ a:hover {
     flex-direction: column;
     align-items: center;
     margin: 2rem auto 0;
-    padding-left:4rem;
+    padding-left: 4rem;
     text-align: center;
   }
 
@@ -346,5 +377,23 @@ a:hover {
   .monk-caption {
     max-width: 300px;
     font-size: 0.9rem;
+  }
+}
+
+.scroll-down img {
+  width: clamp(96px, 12vw, 160px);         /* 2.5× your original */
+  animation: bounceDescend 1.6s infinite;
+}
+
+.scroll-down img:hover {
+  filter: drop-shadow(0 0 6px #3399ff);
+}
+
+@keyframes bounceDescend {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(8px);
   }
 }

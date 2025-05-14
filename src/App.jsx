@@ -2,7 +2,9 @@ import './App.css';
 
 export default function Home() {
   return (
+
     <div className="site-wrapper">
+
       {/* Hero Section */}
       <section className="hero-section snap-section">
         <div className="container">
@@ -10,17 +12,21 @@ export default function Home() {
           <p className="hero-subtitle">DevSecOps | Veteran, US Army</p>
           <div className="social-icons">
             <a href="https://github.com/aaronescoto" className="github" target="_blank" rel="noopener noreferrer">
-              <img src="/github.svg" alt="GitHub" style={{ width: '74px' }} />
+              <img src="/github.svg" alt="GitHub" />
             </a>
             <a href="https://linkedin.com/in/aaronescoto" className="linkedin" target="_blank" rel="noopener noreferrer">
-              <img src="/linkedin.svg" alt="LinkedIn" style={{ width: '74px' }} />
+              <img src="/linkedin.svg" alt="LinkedIn" />
             </a>
             <a href="/resume.pdf" className="resume" target="_blank" rel="noopener noreferrer">
-              <img src="/res.svg" alt="Resume" style={{ width: '74px' }} />
+              <img src="/res.svg" alt="Resume" />
             </a>
           </div>
-          <a href="#pireborn" className="scroll-down">⬇ Click to descend ⬇</a>
         </div>
+      </section>
+      <section className="descend">
+        <a href="#pireborn" className="scroll-down">
+          <img src="/button_cleaned.svg" alt="Scroll Down" />
+        </a>
       </section>
 
       {/* PiReborn Section */}
@@ -50,6 +56,7 @@ export default function Home() {
                 — an ancient DevOps proverb, probably.</p>
             </div>
           </div>
+
           <div className="carousel-wrapper">
             <div className="carousel-track">
               {/* First pass */}
@@ -88,7 +95,6 @@ export default function Home() {
           <p className="section-text">
             PiReborn isn’t just a tech stack—it’s a showcase of real-world DevOps practices:
           </p>
-
           <ul className="section-list">
             <li><strong>GitOps-style deployment pipelines</strong></li>
             <li><strong>Automated certificate management</strong></li>
@@ -97,6 +103,11 @@ export default function Home() {
             <li><strong>Low-resource HA experimentation</strong></li>
             <li><strong>Security-first networking</strong></li>
           </ul>
+          <section className="descend">
+            <a href="#tr6k" className="scroll-down">
+              <img src="/button_cleaned.svg" alt="Scroll Down" />
+            </a>
+          </section>
         </div>
       </section>
 
