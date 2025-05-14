@@ -44,7 +44,7 @@ html, body {
 
 .container,
 .layout {
-  max-width: none;
+  max-width: 1400px;
   margin: 0 auto;
   padding: 0 2rem;
   box-sizing: border-box;
@@ -69,25 +69,26 @@ html, body {
 .hero-section,
 #pireborn,
 #tr6k {
-  min-height: 100vh;
+  font-weight: 300;
+  min-height: 80vh;
   scroll-snap-align: start;
   
 }
 
 #tr6k {
-  padding-top: 20rem;
+  padding-top: 5rem;
   text-align: center;
 }
 
 .section-title {
   font-size: 2rem;
-  font-weight: 700;
+  font-weight: 300;
   margin-bottom: 1.5rem;
   text-align: center;
 }
 
 .section-text {
-  max-width: 1000px;
+  max-width: 1400px;
   margin: 0 auto 2rem;
   font-size: clamp(1rem, 2vw, 1.25rem);
   color: var(--text-primary);
@@ -100,19 +101,20 @@ html, body {
 .hero,
 .hero-section {
   text-align: center;
-  padding-top: 15rem;
+  padding-top: 2rem;
 }
 
 .hero-title {
-  font-size: clamp(2.5rem, 7vw, 4rem);
-  font-weight: 800;
+  font-size: clamp(4.5rem, 12vw, 8rem);
+  font-weight: 300;
   margin-bottom: 1rem;
 }
 
 .hero-subtitle {
-  font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  font-weight: 300;
   color: var(--text-muted);
-  margin-bottom: 15rem;
+  margin-bottom: 10rem;
 }
 
 .social-icons a {
@@ -123,7 +125,7 @@ html, body {
 
 .social-icons a:hover img {
   filter: drop-shadow(0 0 6px var(--accent));
-  transform: scale(1.1);
+  transform: scale(1.3);
   cursor: pointer;
 }
 
@@ -300,11 +302,14 @@ a:hover {
 }
 
 .monk-inline {
+  padding-right: 8rem;
   flex: 0 0 200px;
   text-align: center;
+  margin-top: -4rem;
 }
 
 .monk-inline img {
+  filter: brightness(85%);
   width: 180px;
   height: 180px;
   border-radius: 50%;
@@ -324,3 +329,22 @@ a:hover {
   margin-top: 0.5rem;
 }
 
+@media (max-width: 768px) {
+  .monk-inline {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2rem auto 0;
+    padding-left:4rem;
+    text-align: center;
+  }
+
+  .monk-inline img {
+    margin-bottom: 1rem;
+  }
+
+  .monk-caption {
+    max-width: 300px;
+    font-size: 0.9rem;
+  }
+}

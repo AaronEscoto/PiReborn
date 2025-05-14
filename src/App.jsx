@@ -10,13 +10,13 @@ export default function Home() {
           <p className="hero-subtitle">DevSecOps | Veteran, US Army</p>
           <div className="social-icons">
             <a href="https://github.com/aaronescoto" className="github" target="_blank" rel="noopener noreferrer">
-              <img src="/github.svg" alt="GitHub" style={{ width: '36px' }} />
+              <img src="/github.svg" alt="GitHub" style={{ width: '74px' }} />
             </a>
             <a href="https://linkedin.com/in/aaronescoto" className="linkedin" target="_blank" rel="noopener noreferrer">
-              <img src="/linkedin.svg" alt="LinkedIn" style={{ width: '36px' }} />
+              <img src="/linkedin.svg" alt="LinkedIn" style={{ width: '74px' }} />
             </a>
             <a href="/resume.pdf" className="resume" target="_blank" rel="noopener noreferrer">
-              <img src="/res.svg" alt="Resume" style={{ width: '36px' }} />
+              <img src="/res.svg" alt="Resume" style={{ width: '74px' }} />
             </a>
           </div>
           <a href="#pireborn" className="scroll-down">⬇ Click to descend ⬇</a>
@@ -26,10 +26,10 @@ export default function Home() {
       {/* PiReborn Section */}
       <section id="pireborn" className="section light snap-section">
         <div className="container">
-          <h1 className="section-title center">What you are seeing now...</h1>
+          <h1 className="section-title center">This website is hosted on...</h1>
           <p className="section-text">
             <strong>PiReborn – A Live DevOps Proof-of-Concept: </strong>
-            A fully operational pipeline running on a modest bare-metal Raspberry Pi cluster, showcasing automated deployment, monitoring, and modern infrastructure best practices.
+            A fully operational pipeline running on a modest bare-metal 2xRaspberry Pi cluster, showcasing automated deployment, monitoring, and modern infrastructure best practices.
           </p>
           <h2 className="subsection-title">The Stack</h2>
           <div className="stack-wrapper">
