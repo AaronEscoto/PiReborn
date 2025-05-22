@@ -117,7 +117,7 @@ export default function Home() {
         <div className="container">
           <h1 className="section-title">UNDER CONSTRUCTION</h1>
           <h2 className="section-title">Enter the Realm of TR6K</h2>
-          <p className="quote">“Ashbringer booted, so that others may boot.” — Prime Directive</p>
+          <p className="quote">“Ashbringer booted, so that others may boot.”</p>
           <div className="section-list"></div>
         </div>
       </section>
