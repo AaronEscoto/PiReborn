@@ -1,0 +1,35 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: pireborn-ingress-main
+  namespace: default
+  annotations:
+    cert-manager.io/cluster-issuer: letsencrypt
+    acme.cert-manager.io/http01-ingress-class: traefik
+spec:
+  tls:
+    - hosts:
+        - aaronescoto.com
+        - www.aaronescoto.com
+      secretName: aaronescoto-tls
+  rules:
+    - host: aaronescoto.com
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: pireborn
+                port:
+                  number: 80
+    - host: www.aaronescoto.com
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: pireborn
+                port:
+                  number: 80
