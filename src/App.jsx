@@ -9,7 +9,10 @@ export default function Home() {
       <section className="hero-section snap-section">
         <div className="container">
           <h1 className="hero-title">Aaron Escoto</h1>
-          <p className="hero-subtitle">DevSecOps | Veteran, US Army</p>
+          <p className="hero-subtitle">
+            <i className="fas fa-code icon-white" ></i>
+            DevSecOps | Veteran, US Army
+          </p>
           <div className="social-icons">
             <a href="https://github.com/aaronescoto" className="github" target="_blank" rel="noopener noreferrer">
               <img src="/github.svg" alt="GitHub" />
@@ -23,6 +26,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+
       <section className="descend">
         <a href="#pireborn" className="scroll-down">
           <img src="/button_cleaned.svg" alt="Scroll Down" />

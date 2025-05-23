@@ -347,6 +347,7 @@ a:hover {
   margin-top: -4rem;
 }
 
+
 .monk-inline img {
   filter: brightness(85%);
   width: 180px;
@@ -408,4 +409,10 @@ a:hover {
 
 .snap-section {
   padding-bottom: 0rem;
+}
+
+.icon-white {
+  color: white;
+  padding-right: 10px;
+  font-weight:100;
 }
