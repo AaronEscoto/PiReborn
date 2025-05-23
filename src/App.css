@@ -73,7 +73,8 @@ body {
 #pireborn,
 #tr6k {
   font-weight: 300;
-  min-height: 80vh; /*viewport*/
+  min-height: 80vh;
+  /*viewport*/
   scroll-snap-align: start;
 
 }
@@ -110,17 +111,27 @@ body {
 .hero-title {
   font-size: clamp(3.3rem, 14vw, 13rem);
   font-weight: 200;
+  margin-top: 10rem;
   margin-bottom: 1rem;
   transition: text-shadow 0.3s ease;
 }
+
 .hero-title:hover {
   text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
 }
+
 .hero-subtitle {
   font-size: clamp(1rem, 3vw, 2rem);
   font-weight: 300;
   color: var(--text-muted);
   margin-bottom: 2rem;
+}
+
+.hero-subtitle-loc {
+  font-size: clamp(1rem, 3vw, 2rem);
+  font-weight: 300;
+  color: var(--text-muted);
+  margin-bottom: -1rem;
 }
 
 .descend {
@@ -187,11 +198,12 @@ body {
   transition: transform 0.2s ease, filter 0.2s ease;
 }
 
-.tech-icon:hover{
+.tech-icon:hover {
   filter: drop-shadow(0 0 6px var(--accent));
   transform: scale(1.3);
   cursor: pointer;
 }
+
 @keyframes scroll-left {
   0% {
     transform: translateX(0);
@@ -390,7 +402,8 @@ a:hover {
 }
 
 .scroll-down img {
-  width: clamp(96px, 12vw, 160px);         /* 2.5× your original */
+  width: clamp(96px, 12vw, 160px);
+  /* 2.5× your original */
   animation: bounceDescend 1.9s infinite;
 }
 
@@ -399,9 +412,12 @@ a:hover {
 }
 
 @keyframes bounceDescend {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: translateY(0);
   }
+
   50% {
     transform: translateY(16px);
   }
@@ -414,5 +430,9 @@ a:hover {
 .icon-white {
   color: white;
   padding-right: 10px;
-  font-weight:100;
+  font-weight: 100;
+}
+
+.fa-map-marker-alt {
+  padding-top: 1rem;
 }

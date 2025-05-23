@@ -9,6 +9,10 @@ export default function Home() {
       <section className="hero-section snap-section">
         <div className="container">
           <h1 className="hero-title">Aaron Escoto</h1>
+          <p className="hero-subtitle-loc">
+            <i className="fas fa-map-marker-alt icon-white" ></i>
+            Silicon Valley, CA
+          </p>
           <p className="hero-subtitle">
             <i className="fas fa-code icon-white" ></i>
             DevSecOps | Veteran, US Army
