@@ -1,4 +1,5 @@
 import './App.css';
+import teaserVideo from '../assets/teaser_tr6k.mp4';
 
 export default function Home() {
   return (
@@ -123,10 +124,19 @@ export default function Home() {
       {/* TR6K Section */}
       <section id="tr6k" className="section dark snap-section full-viewport">
         <div className="container">
-          <h1 className="section-title">UNDER CONSTRUCTION</h1>
           <h2 className="section-title">Enter the Realm of TR6K</h2>
-          <p className="quote">“Ashbringer booted, so that others may boot.”</p>
-          <div className="section-list"></div>
+          
+          <div className="tr6k-video-wrapper mt-6 flex flex-col items-center">
+            <video
+              src={teaserVideo}
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="w-[480px] rounded-xl shadow-lg border border-white/10"
+            />
+          </div>
+<p className="quote">“Ashbringer booted, so that others may boot.”</p>
         </div>
       </section>
 
