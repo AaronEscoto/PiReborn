@@ -131,7 +131,8 @@ function AppContent() {
                 loop
                 muted
                 playsInline
-                className="w-[480px] rounded-xl shadow-lg border border-white/10 hover:scale-105 transition-transform duration-500"
+                className="w-full max-w-[480px] rounded-xl shadow-lg border border-white/10 mb-6"
+
               />
             </Link>
           </div>

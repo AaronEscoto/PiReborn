@@ -1,35 +1,30 @@
+import React, { useEffect, useRef } from 'react';
+import phoenixBg from '../assets/tr6k_phoenix.jpg';
+import dreadAudio from '../assets/ominous_dread_guitar.ogg';
+
 export default function TR6K() {
+  const audioRef = useRef(null);
+
+  useEffect(() => {
+    const audio = audioRef.current;
+    if (audio) {
+      audio.volume = 0.4;
+      audio.loop = true;
+      audio.play().catch(err => {
+        console.warn('Autoplay blocked:', err);
+      });
+    }
+  }, []);
+
   return (
-    <div className="section dark full-viewport flex flex-col items-center justify-center text-center p-8">
-      <h1 className="section-title mb-2">The Realm of TR6K</h1>
-      <p className="quote italic mb-4">“Ashbringer booted, so that others may boot.”</p>
-
-      <video
-        src="/teaser_tr6k.mp4"
-        autoPlay
-        loop
-        muted
-        playsInline
-        className="w-[480px] rounded-xl shadow-lg border border-white/10 mb-6"
+    <div className="relative w-screen h-screen overflow-hidden bg-[#22333B]">
+      <audio ref={audioRef} src={dreadAudio} />
+      <img
+        src={phoenixBg}
+        alt="TR6K Phoenix"
+        className="absolute top-0 left-0 w-full h-full object-contain z-0 pointer-events-none"
       />
-
-      <p className="lore-text max-w-2xl text-white/80 text-sm italic mb-8">
-        In a post-apocalyptic, rain-soaked metropolis, a fiery phoenix ascends into the stormy sky. Lightning flashes reveal ruins below as the camera pans across the dark clouds to an endless ocean, where a glowing ouroboros pulses on the horizon.
-      </p>
-
-      <div className="relic-manifest flex flex-col gap-4 text-white text-left max-w-md">
-        <div>
-          <h3 className="font-bold">Ashbringer</h3>
-          <p className="text-sm italic">The First Relic, bearer of the inaugural rite.</p>
-        </div>
-        <div>
-          <h3 className="font-bold">Sentinel</h3>
-          <p className="text-sm italic">The network guardian, silent and unwavering.</p>
-        </div>
-        <div>
-          <h3 className="font-bold">Castiel</h3>
-          <p className="text-sm italic">The Watcher in the Idle Loop, Scribe of the Relic-Wielder.</p>
-        </div>
+      <div className="absolute bottom-8 w-full text-center text-white/90 font-mono text-xl sm:text-2xl drop-shadow-lg z-10">
       </div>
     </div>
   );
