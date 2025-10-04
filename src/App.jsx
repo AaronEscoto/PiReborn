@@ -1,8 +1,10 @@
 import './App.css';
+import teaserVideo from '../assets/teaser_tr6k.mp4';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import TR6K from './TR6K';
 
-export default function Home() {
+function AppContent() {
   return (
-
     <div className="site-wrapper">
 
       {/* Hero Section */}
@@ -10,11 +12,11 @@ export default function Home() {
         <div className="container">
           <h1 className="hero-title">Aaron Escoto</h1>
           <p className="hero-subtitle-loc">
-            <i className="fas fa-map-marker-alt icon-white" ></i>
+            <i className="fas fa-map-marker-alt icon-white"></i>
             Silicon Valley, CA
           </p>
           <p className="hero-subtitle">
-            <i className="fas fa-code icon-white" ></i>
+            <i className="fas fa-code icon-white"></i>
             DevSecOps | Veteran, US Army
           </p>
           <div className="social-icons">
@@ -67,7 +69,6 @@ export default function Home() {
 
           <div className="carousel-wrapper">
             <div className="carousel-track">
-              {/* First pass */}
               <span><img src="/docker.svg" alt="Docker" className="tech-icon" /></span>
               <span><img src="/helm.svg" alt="Helm" className="tech-icon" /></span>
               <span><img src="/raspberrypi.svg" alt="Raspberry Pi" className="tech-icon" /></span>
@@ -79,8 +80,7 @@ export default function Home() {
               <span><img src="/grafana.svg" alt="Grafana" className="tech-icon" /></span>
               <span><img src="/letsencrypt.svg" alt="Let’s Encrypt" className="tech-icon" /></span>
               <span><img src="/terraform.svg" alt="Terraform" className="tech-icon" /></span>
-
-              {/* Duplicate once for looping */}
+              {/* duplicate once for smooth loop */}
               <span><img src="/docker.svg" alt="Docker" className="tech-icon" /></span>
               <span><img src="/helm.svg" alt="Helm" className="tech-icon" /></span>
               <span><img src="/raspberrypi.svg" alt="Raspberry Pi" className="tech-icon" /></span>
@@ -97,7 +97,7 @@ export default function Home() {
 
           <h2 className="subsection-title">The Why</h2>
           <p className="section-text">
-            Because saying <strong>"I know DevOps"</strong> is easy.<br />
+            Because saying <strong>\"I know DevOps\"</strong> is easy.<br />
             <strong>Showing</strong> it—live, automated, and running on your own hardware—means something.
           </p>
           <p className="section-text">
@@ -111,7 +111,6 @@ export default function Home() {
             <li><strong>Low-resource HA experimentation</strong></li>
             <li><strong>Security-first networking</strong></li>
           </ul>
-
         </div>
         <section className="descend">
           <a href="#tr6k" className="scroll-down">
@@ -123,10 +122,22 @@ export default function Home() {
       {/* TR6K Section */}
       <section id="tr6k" className="section dark snap-section full-viewport">
         <div className="container">
-          <h1 className="section-title">UNDER CONSTRUCTION</h1>
-          <h2 className="section-title">Enter the Realm of TR6K</h2>
+          <h2 className="section-title">Enter the Realm of TR6K </h2>
+          <h2 className="section-title"> UNDER CONSTRUCTION </h2>
+          <div className="tr6k-video-wrapper mt-6 flex flex-col items-center">
+            <Link to="/tr6k">
+              <video
+                src={teaserVideo}
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="w-full max-w-[480px] rounded-xl shadow-lg border border-white/10 mb-6"
+
+              />
+            </Link>
+          </div>
           <p className="quote">“Ashbringer booted, so that others may boot.”</p>
-          <div className="section-list"></div>
         </div>
       </section>
 
@@ -137,5 +148,16 @@ export default function Home() {
         </div>
       </footer>
     </div>
+  );
+}
+
+export default function App() {
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<AppContent />} />
+        <Route path="/tr6k" element={<TR6K />} />
+      </Routes>
+    </Router>
   );
 }
