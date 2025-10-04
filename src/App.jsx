@@ -122,7 +122,8 @@ function AppContent() {
       {/* TR6K Section */}
       <section id="tr6k" className="section dark snap-section full-viewport">
         <div className="container">
-          <h2 className="section-title">Enter the Realm of TR6K</h2>
+          <h2 className="section-title">Enter the Realm of TR6K </h2>
+          <h2 className="section-title"> UNDER CONSTRUCTION </h2>
           <div className="tr6k-video-wrapper mt-6 flex flex-col items-center">
             <Link to="/tr6k">
               <video
