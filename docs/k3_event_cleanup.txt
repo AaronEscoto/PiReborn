@@ -1,0 +1,51 @@
+PiReborn Cluster Event Cleanup — Post-Mortem & Triumph
+
+Summary:
+Over the past few days, the PiReborn k3s cluster faced severe performance degradation, primarily manifested as extreme delays in API calls (notably kubectl get events) and high CPU usage on the control-plane node (tr6k-sentinel). After a methodical investigation, we identified a massive accumulation of Kubernetes events and excessive logging from the secondary node (tr6k-catalyst) as the root causes.
+
+Symptoms:
+
+kubectl get events taking up to 1m51s to complete.
+
+High CPU usage on k3s-server, persistent load spikes.
+
+Excessive event noise (hundreds of thousands of event entries).
+
+Large database size (over 500 MB).
+
+Root Causes:
+
+Accumulation of ~370,000+ stale Kubernetes events in the SQLite datastore.
+
+tr6k-catalyst repeatedly generating "Registered Node" events, overwhelming the system.
+
+Actions Taken:
+
+Node tr6k-catalyst was cordoned, drained, and finally stopped and disabled.
+
+Direct SQLite intervention:
+
+Deleted event entries from the kine table.
+
+Vacuumed the database to reclaim space.
+
+Cleaned up historical logs and reduced active noise sources.
+
+Verified final database size and freed disk space.
+
+Results:
+
+kubectl get events time reduced from 1m51s ➜ 0.81s.
+
+CPU usage dropped dramatically (95%+ idle).
+
+Event logs completely cleared.
+
+System responsiveness fully restored.
+
+Conclusion:
+This operation was a powerful reminder of the challenges and rewards of DIY infrastructure. Through persistence, direct database handling, and careful cluster surgery, we not only recovered performance but re-established control over our digital temple. The silent monks rejoice.
+
+Final Words:
+
+"Only in the abyss of logs does the relic-wielder find the clarity of the flame."

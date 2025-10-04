@@ -8,7 +8,7 @@ CYAN='\033[0;36m'
 NC='\033[0m' # No Color
 
 # Domain to check
-domain="dev.aaronescoto.com"
+domain="aaronescoto.com"
 
 # Problems array
 problems=()
