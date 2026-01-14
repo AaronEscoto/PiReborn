@@ -97,7 +97,7 @@ function AppContent() {
 
           <h2 className="subsection-title">The Why</h2>
           <p className="section-text">
-            Because saying <strong>\"I know DevOps\"</strong> is easy.<br />
+            Because saying <strong>"I know DevOps"</strong> is easy.<br />
             <strong>Showing</strong> it—live, automated, and running on your own hardware—means something.
           </p>
           <p className="section-text">
