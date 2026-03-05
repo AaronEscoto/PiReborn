@@ -23,7 +23,7 @@ kubectl get nodes -o wide || problems+=("❌ Failed to retrieve nodes")
 
 # Pods Check
 echo -e "\n${CYAN}📦 Checking Pods:${NC}"
-pods_output=$(kubectl get pods -A)
+pods_output=$(kubectl get pods -A --field-selector=status.phase!=Succeeded)
 
 # Display pods
 echo "$pods_output"
