@@ -1,0 +1,24 @@
+replicaCount: 2
+
+image:
+  repository: ghcr.io/aaronescoto/pireborn
+  tag: production
+  pullPolicy: Always
+
+# Leave empty for public images
+imagePullSecrets: []
+
+service:
+  type: ClusterIP
+  port: 80
+
+ingress:
+  enabled: true
+  className: traefik
+
+  hosts:
+    - aaronescoto.com
+    - www.aaronescoto.com
+
+  tlsSecretName: aaronescoto-tls
+  clusterIssuer: letsencrypt

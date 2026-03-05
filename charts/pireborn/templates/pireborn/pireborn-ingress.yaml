@@ -1,0 +1,29 @@
+{{- if .Values.ingress.enabled }}
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: pireborn-ingress-main
+  annotations:
+    cert-manager.io/cluster-issuer: {{ .Values.ingress.clusterIssuer | quote }}
+spec:
+  ingressClassName: {{ .Values.ingress.className | quote }}
+  tls:
+    - hosts:
+{{- range .Values.ingress.hosts }}
+        - {{ . | quote }}
+{{- end }}
+      secretName: {{ .Values.ingress.tlsSecretName | quote }}
+  rules:
+{{- range .Values.ingress.hosts }}
+    - host: {{ . | quote }}
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: pireborn
+                port:
+                  number: {{ $.Values.service.port }}
+{{- end }}
+{{- end }}

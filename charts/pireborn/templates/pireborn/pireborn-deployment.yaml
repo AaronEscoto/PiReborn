@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pireborn
+  labels:
+    app: pireborn
+spec:
+  replicas: {{ .Values.replicaCount }}
+  selector:
+    matchLabels:
+      app: pireborn
+  template:
+    metadata:
+      labels:
+        app: pireborn
+    spec:
+{{- with .Values.imagePullSecrets }}
+      imagePullSecrets:
+{{ toYaml . | nindent 8 }}
+{{- end }}
+      containers:
+        - name: pireborn
+          image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          ports:
+            - name: http
+              containerPort: 80
+              protocol: TCP
