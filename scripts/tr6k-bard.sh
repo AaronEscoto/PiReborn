@@ -60,9 +60,11 @@ kubectl get ingress -A || problems+=("❌ Failed to retrieve ingresses")
 echo -e "\n${CYAN}🔐 Checking Certificates (if cert-manager installed):${NC}"
 kubectl get certificates -A || echo -e "${YELLOW}⚠️  No certificates found.${NC}"
 
-# Recent Events Check
-echo -e "\n${CYAN}⚠️  Recent Events (last 50 lines):${NC}"
-kubectl get events --all-namespaces --sort-by='.lastTimestamp' | tail -n 50 || echo -e "${YELLOW}⚠️  No events found.${NC}"
+echo -e "\n${CYAN}⚠️  Recent Warning Events:${NC}"
+kubectl get events --all-namespaces \
+  --field-selector type=Warning \
+  --sort-by='.metadata.creationTimestamp' | tail -n 20 \
+  || echo -e "${YELLOW}⚠️  No events found.${NC}"
 
 # External Connectivity
 echo -e "\n${CYAN}🌐 Checking External Connectivity ($domain):${NC}"
