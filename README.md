@@ -22,12 +22,8 @@ The project demonstrates the complete operational lifecycle:
 
 ## 🎯 Objectives
 
-* Operate a live production workload on bare-metal hardware
-* Practice modern DevOps and SRE workflows
-* Automate deployments and infrastructure operations
-* Implement monitoring, observability, and alerting
-* Document operational decisions and incident response
-* Maintain a public demonstration of infrastructure ownership
+* Emulate a production environment on bare-metal hardware
+* Keep current with all the things
 
 ---
 
@@ -63,10 +59,6 @@ The platform includes:
 * Health monitoring and operational visibility
 * Documentation of incidents, recovery procedures, and platform changes
 
-The goal is not scale.
-
-The goal is operational completeness.
-
 ---
 
 ## 🔄 Deployment Workflow
@@ -76,7 +68,7 @@ The goal is operational completeness.
 3. Docker image is built and published to GHCR.
 4. Kubernetes deployment is updated.
 5. Traefik routes traffic to the latest deployment.
-6. Platform health is verified through monitoring and health checks.
+6. Platform health is verified through monitoring, health checks, and Discord webhooks.
 
 ---
 
@@ -97,8 +89,6 @@ Current capabilities include:
 
 ## 📚 Operational Documentation
 
-One of the primary goals of PiReborn is documenting the operational journey itself.
-
 The repository includes:
 
 * Platform state snapshots
@@ -106,8 +96,6 @@ The repository includes:
 * Recovery procedures
 * Infrastructure notes
 * Automation scripts
-
-The project intentionally preserves lessons learned, not just final outcomes.
 
 ---
 
@@ -121,8 +109,6 @@ Features include:
 * Audio integration
 * Alternate project presentation
 * Narrative-driven design concepts
-
-While separate from the platform's technical objectives, the TR6K Realm reflects the creative side of building and maintaining personal infrastructure.
 
 ---
 
