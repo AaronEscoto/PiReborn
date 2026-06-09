@@ -1,4 +1,4 @@
-# 🐍 PiReborn
+# PiReborn
 ## Live Site
 
 https://aaronescoto.com
