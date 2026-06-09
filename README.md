@@ -1,123 +1,171 @@
+# 🐍 PiReborn
+## Live Site
 
-# 🚀 PiReborn: High-Availability Raspberry Pi Cluster + DevOps-Powered Web App
+https://aaronescoto.com
+## Bare Metal Native Solutions For The Average Joe
 
-## **🌐 Project Overview**
-**PiReborn** is a fully self-hosted DevOps proof-of-concept demonstrating a production-like environment deployed on a bare-metal Raspberry Pi cluster. It serves a live React webapp using GitHub Actions, Traefik, and Let's Encrypt — monitored, observable, and secured like any true SRE-grade platform.
+**Iterate. Burn. Return.**
 
----
-
-## **🎯 Project Goals**
-- Build a **High-Availability (HA)** k3s Kubernetes cluster using Raspberry Pi 4s.
-- Serve a live **React + Vite** website via Traefik and automated TLS.
-- Fully automate deployments with **GitHub Actions CI/CD**.
-- Secure the stack with **Let's Encrypt**, Kubernetes Secrets, and RBAC.
-- Monitor the environment with **Prometheus + Grafana**.
-- Demonstrate full DevOps lifecycle: Build → Deploy → Observe.
+🐍 → 🐦‍🔥 → 🐍
 
 ---
 
-## **🧱 Tech Stack**
+## 🌐 Overview
 
-| Layer             | Tech                                                                 |
-|------------------|----------------------------------------------------------------------|
-| **Cluster**       | 2x Raspberry Pi 4 (bare-metal) running k3s                          |
-| **Frontend**      | React + Vite + TailwindCSS                                           |
-| **CI/CD**         | GitHub Actions                                                       |
-| **Ingress**       | Traefik (w/ Let's Encrypt HTTP01 Challenge via cert-manager)        |
-| **Monitoring**    | Prometheus + Grafana                                                 |
-| **Containerization** | Docker (built & pushed via GitHub Actions)                       |
-| **Infrastructure as Code** | Terraform (planned)                                         |
+PiReborn is a live proof-of-concept of modern DevOps and Site Reliability Engineering practices, hosted on self-managed Raspberry Pi hardware and operated as a production platform.
 
----
+Originally created as a personal website project, PiReborn evolved into a practical environment for learning, testing, and operating real infrastructure. The workload is intentionally simple. The platform supporting it is not.
 
-## **📁 Directory Layout**
+The project demonstrates the complete operational lifecycle:
 
-### React + Vite Web App
-```plaintext
-/src
-  /components
-  /pages
-  App.jsx
-  index.jsx
-  vite.config.js
-  tailwind.config.js
-Dockerfile
-package.json
-.github/
-  workflows/
-    docker-build.yaml
-README.md
-```
+> **Build → Deploy → Observe → Improve**
 
-### Kubernetes Deployment YAMLs
-```plaintext
-acme-challenge-ingress.yaml
-cluster-issuer.yaml
-cert-manager-ns.json
-pireborn-deployment.yaml
-pireborn-service.yaml
-pireborn-ingress.yaml
-pireborn-ingress-dev.yaml
-```
+While many homelabs focus on technology demonstrations, PiReborn focuses on operational ownership. Every deployment, outage, certificate renewal, DNS change, failed experiment, and recovery contributes to the platform's ongoing evolution.
 
 ---
 
-## **📦 GitHub Actions CI/CD Pipeline**
+## 🎯 Objectives
+
+* Operate a live production workload on bare-metal hardware
+* Practice modern DevOps and SRE workflows
+* Automate deployments and infrastructure operations
+* Implement monitoring, observability, and alerting
+* Document operational decisions and incident response
+* Maintain a public demonstration of infrastructure ownership
+
+---
+
+## 🧱 Technology Stack
+
+| Layer            | Technology                   |
+| ---------------- | ---------------------------- |
+| Compute          | Raspberry Pi 4 (Bare Metal)  |
+| Orchestration    | k3s Kubernetes               |
+| Frontend         | React + Vite                 |
+| Containerization | Docker                       |
+| CI/CD            | GitHub Actions               |
+| Ingress          | Traefik                      |
+| TLS              | cert-manager + Let's Encrypt |
+| DNS              | Namecheap Dynamic DNS        |
+| Monitoring       | Prometheus + Grafana         |
+| Packaging        | Helm                         |
+| Source Control   | GitHub                       |
+
+---
+
+## 🏗️ Architecture
+
+PiReborn runs on a self-managed Raspberry Pi cluster using k3s.
+
+The platform includes:
+
+* Automated container builds through GitHub Actions
+* Container image publishing through GitHub Container Registry (GHCR)
+* Helm-based application deployment
+* Automated TLS certificate management
+* Dynamic DNS updates for residential ISP changes
+* Health monitoring and operational visibility
+* Documentation of incidents, recovery procedures, and platform changes
+
+The goal is not scale.
+
+The goal is operational completeness.
+
+---
+
+## 🔄 Deployment Workflow
 
 1. Code is pushed to the `main` branch.
-2. GitHub Actions builds the React app.
-3. Docker image is built and pushed to **ghcr.io**.
-4. (Planned) Helm chart or `kubectl` applies deployment on cluster.
-5. Ingress + Traefik route external traffic to the newly updated app.
-
-✅ TLS via Let's Encrypt  
-✅ CI with GitHub Actions  
-✅ Live Deployment via Docker + Kubernetes
+2. GitHub Actions builds and validates the application.
+3. Docker image is built and published to GHCR.
+4. Kubernetes deployment is updated.
+5. Traefik routes traffic to the latest deployment.
+6. Platform health is verified through monitoring and health checks.
 
 ---
 
-## **📡 Monitoring & Observability (WIP)**
+## 📊 Observability
 
-Planned integration of:
-- **Prometheus**: Cluster and pod metrics
-- **Grafana**: Live dashboards
-- **Alertmanager**: Basic webhooks or future integration w/ Discord or email
+PiReborn incorporates monitoring and operational tooling commonly found in larger production environments.
 
----
+Current capabilities include:
 
-## **🧭 Roadmap**
-
-| Status | Task |
-|--------|------|
-| ✅     | Raspberry Pi cluster (tr6k-sentinel & tr6k-catalyst) bootstrapped with k3s |
-| ✅     | Traefik + cert-manager ingress setup for HTTPS |
-| ✅     | Let's Encrypt certificate successfully issued via DNS challenge |
-| ✅     | GitHub Actions build + push working with GHCR |
-| ✅     | Live React site served from cluster |
-| ⏳     | Add Helm charts for automated deployment |
-| ⏳     | Add Prometheus + Grafana for observability |
-| ⏳     | Implement webhooks / alerting |
-| ⏳     | Add Terraform IaC to define deployment manifests |
-| ⏳     | Build secondary themed TR6K page (visual storytelling w/ parallax, VHS FX) |
-| ⏳     | Integrate project description into site homepage ("What you're seeing...") |
+* Prometheus metrics collection
+* Grafana dashboards
+* Kubernetes health visibility
+* Platform health checks
+* Operational logging
+* Incident documentation and post-mortems
 
 ---
 
-## **📜 TR6K Thematic Add-on (Future Enhancement)**
+## 📚 Operational Documentation
 
-We will include an alternate immersive universe — **TR6K Realm** — a retro-futuristic digital sanctum with:
-- ASCII FX, flicker animations, and VHS overlays
-- Phoenix & Ouroboros themed elements
-- Canonical lore embedded within code & UI
-- Parallax, glow text, synth musak
+One of the primary goals of PiReborn is documenting the operational journey itself.
 
-Accessible from main landing page as an “alternate mode.”
+The repository includes:
+
+* Platform state snapshots
+* Incident reports
+* Recovery procedures
+* Infrastructure notes
+* Automation scripts
+
+The project intentionally preserves lessons learned, not just final outcomes.
 
 ---
 
-## **🗨️ Final Word**
+## 📜 TR6K Realm
 
-> "**Yeah, my personal website runs on a self-built high-availability Kubernetes cluster on bare-metal Raspberry Pi 4s, fully automated with CI/CD pipelines and monitored with Grafana.**"  
-> – You, casually, at every meetup 😎
+PiReborn also contains the TR6K Realm, an optional thematic layer built around retro-futuristic storytelling, visual experimentation, and project lore.
 
-_Last updated: 2025-04-21_
+Features include:
+
+* Custom artwork
+* Audio integration
+* Alternate project presentation
+* Narrative-driven design concepts
+
+While separate from the platform's technical objectives, the TR6K Realm reflects the creative side of building and maintaining personal infrastructure.
+
+---
+
+## 🚧 Current Status
+
+### ✅ Operational
+
+* Kubernetes cluster running
+* Automated CI/CD pipeline operational
+* HTTPS/TLS fully automated
+* Dynamic DNS automation active
+* Monitoring and observability deployed
+* Production workload live
+
+### 🔧 Ongoing Improvements
+
+* Platform hardening
+* Additional automation
+* Infrastructure cleanup and refinement
+* Continued operational documentation
+
+---
+
+## 🗨️ Final Thoughts
+
+The workload is intentionally simple.
+The platform is intentionally real.
+
+Every improvement, outage, deployment, and recovery contributed to the same lesson:
+
+> Reliable systems are not built once.
+> They are continuously maintained, observed, and improved.
+
+PiReborn exists as a reminder that meaningful infrastructure does not require a datacenter, a large budget, or a massive team.
+
+Sometimes it fits on a desk.
+
+---
+
+🐍 → 🐦‍🔥 → 🐍
+
+**Iterate. Burn. Return.**
