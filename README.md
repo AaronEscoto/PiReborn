@@ -1,6 +1,6 @@
 # PiReborn
 ## Bare Metal Native Solutions For The Average Joe
-## Iterate. Burn. Return
+*Iterate. Burn. Return*
 🐍 → 🐦‍🔥 → 🐍
 
 ---
