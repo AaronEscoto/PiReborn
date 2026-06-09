@@ -46,3 +46,4 @@ coverage/
 .github/workflows/*.tmp
 
 push_to_github.sh
+scripts/update_namecheap_ddns.sh
