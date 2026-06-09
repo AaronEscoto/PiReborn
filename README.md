@@ -9,13 +9,12 @@
 
 PiReborn is a live proof-of-concept of modern DevOps and Site Reliability Engineering practices, hosted on self-managed Raspberry Pi hardware and operated as a production platform.
 
-Originally created as a personal website project, PiReborn evolved into a practical environment for learning, testing, and operating real infrastructure. The workload is intentionally simple. The platform supporting it is not.
+The workload is intentionally simple.
+The platform is intentionally real.
 
 The project demonstrates the complete operational lifecycle:
 
 > **Build → Deploy → Observe → Improve**
-
-While many homelabs focus on technology demonstrations, PiReborn focuses on operational ownership. Every deployment, outage, certificate renewal, DNS change, failed experiment, and recovery contributes to the platform's ongoing evolution.
 
 ---
 
