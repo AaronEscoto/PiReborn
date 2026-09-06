@@ -45,12 +45,12 @@ function AppContent() {
           <h1 className="section-title center">This website is hosted on...</h1>
           <p className="section-text">
             <strong>PiReborn – A Live DevOps Proof-of-Concept: </strong>
-            A fully operational pipeline running on a modest bare-metal 2xRaspberry Pi cluster, showcasing automated deployment, monitoring, and modern infrastructure best practices.
+            A fully operational pipeline running on a modest bare-metal Raspberry Pi cluster, showcasing automated deployment, monitoring, and modern infrastructure best practices.
           </p>
           <h2 className="subsection-title">The Stack</h2>
           <div className="stack-wrapper">
             <ul className="stack-list">
-              <li><strong>Infrastructure:</strong> 2x Raspberry Pi 4, bare-metal</li>
+              <li><strong>Infrastructure:</strong> Raspberry Pi 4, bare-metal</li>
               <li><strong>Kubernetes:</strong> k3s, lightweight and battle-tested</li>
               <li><strong>Networking & Ingress:</strong> Traefik with automatic TLS via Let's Encrypt</li>
               <li><strong>Frontend:</strong> React + Vite webapp</li>
