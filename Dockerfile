@@ -2,8 +2,12 @@
 FROM node:20 AS builder
 
 WORKDIR /app
+
+COPY package*.json ./
+RUN npm ci
+
 COPY . .
-RUN npm install && npm run build
+RUN npm run build
 
 # Stage 2: Serve
 FROM nginx:alpine
@@ -13,4 +17,3 @@ COPY config/nginx/default.conf /etc/nginx/conf.d/default.conf
 
 EXPOSE 80
 CMD ["nginx", "-g", "daemon off;"]
-
